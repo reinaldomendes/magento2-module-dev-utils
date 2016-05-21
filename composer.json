@@ -11,5 +11,13 @@
     ],
     "version" : "1.0.0",
     "minimum-stability": "beta",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Magento\\AdminNotification\\": ""
+        }
+    }
 }
