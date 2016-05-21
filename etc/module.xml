@@ -9,6 +9,7 @@
     <module name="ReinaldoMendes_DevUtils" setup_version="2.0.3">
         <sequence>
             <module name="Magento_Framework"/>          
+            <module name="Magento_Developer"/>
         </sequence>
     </module>
 </config>
