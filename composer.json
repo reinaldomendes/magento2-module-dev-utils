@@ -1,5 +1,5 @@
 {
-    "name": "reinaldo-mendes/dev-utils",
+    "name": "reinaldomendes/magento2-module-dev-utils",
     "description": "Tools for speedup magento2 development.",
     "type": "magento2-module",
     "license": "MIT",
