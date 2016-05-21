@@ -1,0 +1,14 @@
+{
+    "name": "reinaldo-mendes/dev-utils",
+    "description": "Tools for speedup magento2 development.",
+    "type": "magento2-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Reinaldo Mendes",
+            "email": "reinaldorock@yahoo.com.br"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {}
+}
