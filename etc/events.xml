@@ -7,6 +7,6 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="layout_generate_blocks_before">
-        <observer name="devutils_hints" instance="Rbm\DevUtils\Observer\Hints" />
+        <observer name="devutils_hints" instance="ReinaldoMendes\DevUtils\Observer\Hints" />
     </event>
 </config>

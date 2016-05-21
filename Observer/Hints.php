@@ -1,6 +1,6 @@
 <?php
 
-namespace Rbm\DevUtils\Observer;
+namespace ReinaldoMendes\DevUtils\Observer;
 
 use \Magento\Framework\Event\ObserverInterface,
     \Magento\Framework\App\Config\ScopePool,
