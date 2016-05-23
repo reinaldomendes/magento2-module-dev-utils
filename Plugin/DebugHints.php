@@ -10,8 +10,7 @@ namespace ReinaldoMendes\DevUtils\Plugin;
 
 use \Magento\Framework\App\Request\Http as Request,
     \Magento\Framework\App\Config\ScopePool,
-    \Magento\Store\Model\ScopeInterface,
-    \Magento\Framework\App\Bootstrap;
+    \Magento\Store\Model\ScopeInterface;
 
 class DebugHints
 {
@@ -28,23 +27,15 @@ class DebugHints
      */
     private $scopePool;
 
-    /**
-     *
-     * @var \Magento\Framework\App\Bootstrap
-     */
-    private $bootstrap;
-
-    public function __construct(ScopePool $scopePool, Request $request,
-            Bootstrap $bootstrap)
+    public function __construct(ScopePool $scopePool, Request $request)
     {
         $this->scopePool = $scopePool;
         $this->request = $request;
-        $this->bootstrap = $bootstrap;
     }
 
     public function aroundCreate($object, $method, $argument)
     {
-        if (null === $this->request->getQuery('hint') || !$this->bootstrap->isDeveloperMode()) {//return early if not hint query or not in developer mode
+        if (null === $this->request->getQuery('hint')) {//return early if not hint query
             return $method($argument);
         }
 
@@ -56,8 +47,8 @@ class DebugHints
         ];
         $scope = $this->scopePool->getScope(ScopeInterface::SCOPE_STORE, null);
         foreach ($paths as $path => $value) {
-
-            $paths[$path] = $scope->getValue($path, $value); //save original value in paths            
+            
+            $paths[$path] = $scope->getValue($path, $value);//save original value in paths            
             $scope->setValue($path, $value);
         }
 
