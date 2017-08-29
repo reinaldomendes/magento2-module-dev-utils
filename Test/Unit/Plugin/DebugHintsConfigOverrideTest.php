@@ -83,7 +83,7 @@ class DebugHintsConfigOverrideTest extends \PHPUnit_Framework_TestCase
                 ->willReturn('?hint');
         $this->assertEquals($this->requestMock->getQuery(), '?hint');
 
-        $debugHintsConfigOverride = new DebugHintsConfigOverride($this->requestMock,$this->storeManager,$this->devHelperMock);
+        $debugHintsConfigOverride = new DebugHintsConfigOverride($this->requestMock,$this->storeManager);
         $matches = [
             'dev/debug/template_hints_admin' => 1,
             'dev/debug/template_hints_storefront' => 1,
@@ -125,7 +125,7 @@ class DebugHintsConfigOverrideTest extends \PHPUnit_Framework_TestCase
                 ->disableOriginalConstructor()
                 ->getMock();
 
-                
+
 
         $engineMock = $this->getMock('Magento\Framework\View\TemplateEngineInterface');
         $this->debugHintsFactory->expects($this->once())
@@ -156,7 +156,7 @@ class DebugHintsConfigOverrideTest extends \PHPUnit_Framework_TestCase
         );
 
 
-        $debugHintsConfigOverride = new DebugHintsConfigOverride($this->requestMock,$this->storeManager,$this->devHelperMock);
+        $debugHintsConfigOverride = new DebugHintsConfigOverride($this->requestMock,$this->storeManager);
         $this->scopeConfigMock->expects($this->any())
                             ->method('getValue')
                             ->with(
