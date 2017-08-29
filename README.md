@@ -10,4 +10,4 @@ Developer utilities for Magento 2
 Its also works on Admin
 
 ## Magento version
-Tested on 2.0.6
+Tested on 2.1.7
