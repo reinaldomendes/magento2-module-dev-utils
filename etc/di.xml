@@ -7,6 +7,6 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <type name="Magento\Framework\View\TemplateEngineFactory">
-         <plugin name="devutils_hints" type="ReinaldoMendes\DevUtils\Plugin\DebugHints" sortOrder="0" />
+         <plugin name="devutils_hints" type="ReinaldoMendes\DevUtils\Plugin\DebugHintsConfigOverride" sortOrder="0" />
     </type>
 </config>

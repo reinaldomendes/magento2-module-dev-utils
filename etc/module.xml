@@ -6,10 +6,11 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="ReinaldoMendes_DevUtils" setup_version="2.0.3">
+    <module name="ReinaldoMendes_DevUtils" setup_version="2.1.7">
         <sequence>
-            <module name="Magento_Framework"/>          
+            <module name="Magento_Framework"/>
             <module name="Magento_Developer"/>
+            <module name="Magento_Config"/>
         </sequence>
     </module>
 </config>
