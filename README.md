@@ -10,8 +10,10 @@ Developer utilities for Magento 2
 Its also works on Admin
 
 ## Screenshots
+#### Frontend
 ![Frontend](https://reinaldomendes.github.io/dev-assets/magento2/modules/reinaldomendes-devutils/frontend.png)
 
+#### Admin
 ![Admin](https://reinaldomendes.github.io/dev-assets/magento2/modules/reinaldomendes-devutils/admin.png)
 
 
