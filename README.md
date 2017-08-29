@@ -10,7 +10,9 @@ Developer utilities for Magento 2
 * Only Works on developer mode
 
 `bin/magento deploy:mode:set developer`
+
 Also check the config
+
 `Stores > Configuration > Developer > Client Restrictions > Allowed IPs (comma separated)`
 
 
