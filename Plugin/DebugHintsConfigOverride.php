@@ -10,7 +10,8 @@ namespace ReinaldoMendes\DevUtils\Plugin;
 
 use \Magento\Framework\App\Request\Http as Request,
     \Magento\Framework\App\Config\ScopeConfigInterface,
-    \Magento\Store\Model\StoreManagerInterface;
+    \Magento\Store\Model\StoreManagerInterface,
+    \Magento\Developer\Helper\Data as DevHelper;
 
 
 class DebugHintsConfigOverride
@@ -41,18 +42,19 @@ class DebugHintsConfigOverride
     private $isHint = false;
 
 
-    public function __construct(Request $request,StoreManagerInterface $storeManager)
+    public function __construct(Request $request,StoreManagerInterface $storeManager,DevHelper $devHelper)
     {
         $this->storeManager = $storeManager;
         $this->request = $request;
-        if (null !== $this->request->getQuery('hint')) {//return early if not hint query
+        $this->devHelper = $devHelper;
+        if ($this->devHelper->isDevAllowed() && null !== $this->request->getQuery('hint')) {//return early if not hint query
             $this->isHint = true;
         }
     }
 
 
 
-    public function aroundGetValue($subject,callable $proceed,$path=null,$scope= ScopeConfigInterface::SCOPE_TYPE_DEFAULT,$scopeCode=null){
+    public function aroundGetValue($subject,callable $proceed,$path=null,$scope= ScopeConfigInterface::SCOPE_TYPE_DEFAULT,$scopeCode=null){        
         if($this->isHint && isset($this->paths[$path])){
             return $this->paths[$path];
         }
