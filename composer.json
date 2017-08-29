@@ -18,6 +18,7 @@
         ],
         "psr-4": {
             "ReinaldoMendes\\DevUtils\\": ""
-        }
+        },
+        "exclude-from-classmap" : ["/Tests/"]
     }
 }
