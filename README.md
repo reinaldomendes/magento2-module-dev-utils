@@ -5,7 +5,7 @@ Developer utilities for Magento 2
 
 
 ## Enable template hints on the fly with url query string.
-```MYURL/?hint ```
+```http://MYURL/?hint ```
 
 Its also works on Admin
 
