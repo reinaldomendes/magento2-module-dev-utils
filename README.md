@@ -9,7 +9,12 @@ Developer utilities for Magento 2
 
 Its also works on Admin
 
-## Magento version
-Tested on
+## Screenshots
+![Frontend](https://reinaldomendes.github.io/dev-assets/magento2/modules/reinaldomendes-devutils/frontend.png)
+
+![Admin](https://reinaldomendes.github.io/dev-assets/magento2/modules/reinaldomendes-devutils/admin.png)
+
+
+## Magento version tested
 - 2.0.6
 - 2.1.7
