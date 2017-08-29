@@ -7,7 +7,11 @@ Developer utilities for Magento 2
 ## Enable template hints on the fly with url query string.
 ```http://MYURL/?hint ```
 
-Its also works on Admin
+* Only Works on developer mode
+`bin/magento deploy:mode:set developer`
+
+
+
 
 ## Screenshots
 #### Frontend
