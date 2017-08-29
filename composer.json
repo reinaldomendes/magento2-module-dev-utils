@@ -8,8 +8,9 @@
             "name": "Reinaldo Mendes",
             "email": "reinaldorock@yahoo.com.br"
         }
-    ],    
-    "minimum-stability": "beta",
+    ],
+    "minimum-stability": "stable",
+    "version": "2.0.6",
     "require": {},
     "autoload": {
         "files": [
